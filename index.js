@@ -16,7 +16,9 @@ net.train(trainingData, {
   iterations: 20000, // the maximum times to iterate the training data
   errorThresh: 0.005, // the acceptable error percentage from training data
   log: (error) => console.log(error), // rate of errors in the training
-  logPeriod: 100 // iterations between logging out
+  logPeriod: 100, // iterations between logging out
+  learningRate: 0.3, // scales with delta to effect training rate
+  momentum: 0.1, // scales with next layer's change value
 });
 
 console.log(net.run([0, 0]));
